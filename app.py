@@ -5,7 +5,7 @@ from invoice_reader.functions import extract_pdf_contents, provide_answer
 
 try:
 
-    os.getenv("OPENAI_API_KEY") == st.secrets["OPENAI_API_KEY"]
+    OPENAI_APY_KEY = os.getenv("OPENAI_API_KEY")
 
     # Set path for pdf file
     pdf_path = "./src/Invoice1.pdf"
@@ -34,7 +34,7 @@ try:
     )
 
     # Create an output text box that shows the current state of the output
-    answer = st.text_area(label="Answer:", value=st.session_state["read"], height=250)
+    answer = st.text_area(label="Answer: ", value=st.session_state["read"], height=250)
 
 except:
     st.write("There was an error.")
