@@ -7,13 +7,13 @@ from invoice_reader.functions import extract_pdf_contents, provide_answer
 OPENAI_APY_KEY = os.getenv("OPENAI_API_KEY")
 
 # Set path for pdf file
-pdf_path = "./src/Invoice1.pdf"
+pdf_path = os.path.abspath("./src/Invoice1.pdf")
 
 # Read pdf file
 pdf_contents = extract_pdf_contents(pdf_path)
 
 # Set path for image file
-image= Image.open('./src/Invoice1.png')
+image= Image.open(os.path.abspath("./src/Invoice1.PNG"))
 
 # Display the pdf image
 st.image(image=image)
