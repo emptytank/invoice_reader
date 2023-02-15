@@ -31,7 +31,7 @@ def provide_answer(pdf_contents, input_text):
             prompt=prompt_template,
             llm=OpenAI(
                 model_name="text-davinci-003", 
-                temperature=0
+                temperature=0.5
             ),
             verbose=True
         )
