@@ -16,7 +16,7 @@ def provide_answer(pdf_contents, input_text):
     You are reviewing the following invoice and are asked a question about the invoice. Here are the contents of the invoice you are reviewing: {pdf_contents}
     All information after the purchase order number is in a tabular format.
     If the question requires you to perform any calculations, perform the calculations first before providing an answer.
-    Explain your reasoning for the answer you provide on the invoice.
+    Explain your reasoning for the answer you provide on the invoice. There can only be one correct answer.
     Question: {question}"""
 
     try:
