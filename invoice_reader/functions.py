@@ -17,7 +17,7 @@ def provide_answer(pdf_contents, input_text):
     All information after the purchase order number is in a tabular format.
     If the question requires you to perform any calculations, perform the calculations first before providing an answer.
     Explain your reasoning for the answer you provide on the invoice. There can only be one correct answer.
-    Question: {question}"""
+    \n\nQuestion: {question}"""
 
     try:
         #st.session_state["state"] is a Python dictionary that stores the state of the app. It is used to store the prompt and the response.
